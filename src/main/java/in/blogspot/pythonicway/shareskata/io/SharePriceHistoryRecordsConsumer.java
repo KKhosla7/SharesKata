@@ -5,13 +5,12 @@ import in.blogspot.pythonicway.shareskata.exceptions.ContentException;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by Karan Khosla on 22/7/14.
  */
-public class CSVFileReader {
+public class SharePriceHistoryRecordsConsumer {
 
 
     public static List<SharePriceHistoryRecords> readFileIntoList(final String filePath) {
@@ -23,7 +22,7 @@ public class CSVFileReader {
 
             String[] header = buffer.readLine().split(",");
 
-            String recordsLineByLine = "";
+            String recordsLineByLine;
             while ( (recordsLineByLine = buffer.readLine()) != null) {
                 String[] dataSplit = recordsLineByLine.split(",");
 
